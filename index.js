@@ -38,7 +38,7 @@ Attractor.prototype.add = function (key, cb) {
             }
             return function () {
                 var argv = args.slice(1).concat([].slice.call(arguments));
-                return args[0].apply(this, argv);
+                return args[0].apply(self, argv);
             };
         })(cb);
     }
